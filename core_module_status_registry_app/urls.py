@@ -1,6 +1,7 @@
 """ Url router for the Status registry module
 """
 from django.conf.urls import url
+
 from core_module_status_registry_app.views.views import StatusRegistryModule
 
 urlpatterns = [
