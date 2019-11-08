@@ -11,7 +11,7 @@ class StatusRegistryModule(AbstractOptionsModule):
             DataStatus.ACTIVE: 'Active',
         }
 
-        AbstractOptionsModule.__init__(self, options=self.options, disabled=True)
+        AbstractOptionsModule.__init__(self, options=self.options, disabled=False)
 
     def _retrieve_data(self, request):
         """ Retrieve module's data
@@ -27,7 +27,6 @@ class StatusRegistryModule(AbstractOptionsModule):
         self.selected = DataStatus.ACTIVE
         if request.method == 'GET':
             if 'data' in request.GET:
-                self.disabled = False
                 self.selected = request.GET['data']
         elif request.method == 'POST':
             if 'data' in request.POST:
