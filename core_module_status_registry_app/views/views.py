@@ -22,12 +22,18 @@ class StatusRegistryModule(AbstractOptionsModule):
         Returns:
 
         """
-
+        # default value is active
         data = DataStatus.ACTIVE
-        self.selected = DataStatus.ACTIVE
+        self.selected = data
+        # GET module data
         if request.method == 'GET':
             if 'data' in request.GET:
-                self.selected = request.GET['data']
+                data = request.GET['data']
+                # Add deleted option only if editing a data with deleted status
+                if data == DataStatus.DELETED and DataStatus.DELETED not in self.options:
+                    self.options[DataStatus.DELETED] = 'Deleted'
+                self.selected = data
+        # POST module data
         elif request.method == 'POST':
             if 'data' in request.POST:
                 data = request.POST['data']
