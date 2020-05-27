@@ -6,5 +6,9 @@ from django.urls import re_path
 from core_module_status_registry_app.views.views import StatusRegistryModule
 
 urlpatterns = [
-    re_path(r'module-status-registry', StatusRegistryModule.as_view(), name='core_module_status_registry_view'),
+    re_path(
+        r"module-status-registry",
+        StatusRegistryModule.as_view(),
+        name="core_module_status_registry_view",
+    ),
 ]
