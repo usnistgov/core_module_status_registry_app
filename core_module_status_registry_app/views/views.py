@@ -16,7 +16,7 @@ class StatusRegistryModule(AbstractOptionsModule):
         AbstractOptionsModule.__init__(self, options=self.options, disabled=False)
 
     def _retrieve_data(self, request):
-        """ Retrieve module's data
+        """Retrieve module's data
 
         Args:
             request:
@@ -45,7 +45,7 @@ class StatusRegistryModule(AbstractOptionsModule):
         return data
 
     def _render_data(self, request):
-        """ Return module's data rendering
+        """Return module's data rendering
 
         Args:
             request:
