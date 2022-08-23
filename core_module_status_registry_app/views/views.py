@@ -7,6 +7,8 @@ from core_parser_app.tools.modules.views.builtin.options_module import (
 
 
 class StatusRegistryModule(AbstractOptionsModule):
+    """Status Registry Module"""
+
     def __init__(self):
         self.options = {
             DataStatus.INACTIVE: "Inactive",
