@@ -15,7 +15,9 @@ class StatusRegistryModule(AbstractOptionsModule):
             DataStatus.ACTIVE: "Active",
         }
 
-        AbstractOptionsModule.__init__(self, options=self.options, disabled=False)
+        AbstractOptionsModule.__init__(
+            self, options=self.options, disabled=False
+        )
 
     def _retrieve_data(self, request):
         """Retrieve module's data
