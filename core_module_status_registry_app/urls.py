@@ -1,5 +1,4 @@
-""" Url router for the Status registry module
-"""
+"""Url router for the Status registry module"""
 
 from django.urls import re_path
 

@@ -1,5 +1,4 @@
-""" Status registry Module
-"""
+"""Status registry Module"""
 
 from core_main_registry_app.commons.constants import DataStatus
 from core_parser_app.tools.modules.views.builtin.options_module import (
